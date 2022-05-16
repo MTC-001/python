@@ -97,14 +97,54 @@
 # print(f"我是{name},今年{age}歲,性別{gender},工資是{salary}")
 
 # 遍歷列表
-list = ["張三","李四","趙名"]
-for i in list:
-    print(i)
-for index,value in enumerate(list):
-    print(index,value)
-list.append("小明")
-list.append("小麗")
-list.extend(["趙造","小李","小王"])
-print(list)
-list.insert(0,"hhh")
-print(list)
+# list = ["張三","李四","趙名"]
+# for i in list:
+#     print(i)
+# for index,value in enumerate(list):
+#     print(index,value)
+# list.append("小明")
+# list.append("小麗")
+# list.extend(["趙造","小李","小王"])
+# print(list)
+# 在指定位置插入元素
+# list.insert(0,"hhh")
+# print(list)
+# 根據下標刪除元素
+# list.pop()
+# print(list)
+# 根據元素名刪除元素
+# list.remove("張三")
+# print(list)
+# 清空列表
+# list.clear()
+# print(list)
+
+# 列表排序
+# number = [1,2,12,23,45,3,24,46,75]
+# number.sort()
+# print(number)
+# number.sort(reverse=True)
+# print(number)
+# 默認升序,返回值爲列表
+# print(sorted(number,reverse=True))
+# 翻轉列表
+# number.reverse()
+# print(number)
+# 獲取列表長度
+# print(len(number))
+# 獲取列表中的最值
+# print(max(number))
+# print(min(number))
+# 獲取指定元素的索引
+# print(number.index(1))
+
+# 生成1-10之間所有數
+# num = list(range(1,11))
+# print(num)
+# 生成1 4 9 16 25
+# num1 = []
+# for i in range(1,6):
+#     num1.append(i ** 2)
+# print(num1)
+# num2 = [i ** 2 for i in range(1,6)]
+# print(num2)
