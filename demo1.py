@@ -43,7 +43,7 @@
 #     print("hello world")
 #     num += 1 
 
-# name = "==fuuck=="
+# name = "==fuck up=="
 # print(name[0:2:1] + "--fu")
 # print(name[:3] + "--fuc")
 # print(name[0:] + "--fuck")
@@ -148,3 +148,167 @@
 # print(num1)
 # num2 = [i ** 2 for i in range(1,6)]
 # print(num2)
+
+# stu = {"name":"張三","age":"19","salary":"45556.44","gender":"n"}
+# 獲取字典中元素
+# print(stu["age"])
+# print(stu.get("age"))
+# 更改字典中元素
+# stu["salary"] = 44444
+# print(stu.get("salary"))
+# 刪除字典中指定元素
+#stu.pop("gender")
+#print(stu)
+# 刪除字典中最後一個元素
+# stu.popitem()
+# print(stu)
+# 清空字典
+# stu.clear()
+# print(stu)
+# 獲取字典長度
+# print(len(stu))
+# 獲取字典中所有key
+# print(stu.keys())
+# 獲取字典中所有value
+# print(stu.values())
+# 獲取所有key，value
+# print(stu.items())
+# 遍歷字典中所有key
+# for i in stu:
+#     print(i)
+# 遍歷字典中所有key，value
+# for k,v in stu.items():
+#     print(k,v)
+# 遍歷字典中所有的value
+# for v in stu.values():
+#     print(v)
+# 一維深拷貝(對象的引用)
+# num1 = [1,2,3,4,5,6,7]
+# num2 = num1
+# print(num1,num2)
+# num2[0] = 100
+# print(num1,num2)
+# 一維淺拷貝
+# num1 = [1,2,3,4,5,6,7]
+# num2 = num1.copy()
+# print(num1,num2)
+# num2[0] = 100
+# print(num1,num2)
+# 二維淺拷貝
+# num1 = [1,2,3,[3.2,3.4,3.6,3.8],5,6,7]
+# num2 = num1.copy()
+# print(num1,num2)
+# num2[3][0] = 100
+# print(num1,num2)
+# 二維淺拷貝
+# import copy
+# num1 = [1,2,3,[3.2,3.4,3.6,3.8],5,6,7]
+# num2 = copy.deepcopy(num1)
+# print(num1,num2)
+# num2[3][0] = 100
+# print(num1,num2)
+
+# 函數的聲明及調用
+# def test():
+#     for i in range(1,11):
+#         print(i)
+        
+# a = test
+# a()
+# 匿名函數
+# num = lambda a : a ** 2
+# print(num(5))
+# 回調函數
+# def add(x,y):
+#     print(x + y)
+# def split(x,y):
+#     print(x - y)
+# def i(x,y,name):
+#     name(x,y)
+# i(3,4,add)
+# i(6,4,split)    
+# 閉包函數
+# def demo(x):
+#     y = 13
+#     def ini():
+#         print(x+y)
+#     return ini
+# fun = demo(1)
+# fun()
+# num = 11
+# def add():
+#     global num
+#     num = 13
+#     print(num)
+# add()
+# print(num)
+# 篩選數據
+# ages = [11,22,3,33,34,55,66,77,78]
+# a = filter(lambda i : i > 30, ages)
+# print(list(a))
+# 處理數據
+# a = map(lambda i : i + 100, ages)
+# print(list(a))
+# 裝飾器函數
+# def outer(h):
+#     def inner():
+#         print("hello")
+#         h()
+#     return inner  
+# @outer     
+# def ha():
+#     print("world")
+# ha()
+# 模塊
+import random
+import time
+import math
+import os
+import datetime
+
+# print(time.time())
+# 停止五秒在執行
+# time.sleep(5)
+# print(random.randint(1,11))
+# print(math.fabs(-111))
+# print(math.sqrt(4))
+# 向上取整
+# print(math.ceil(3.44))
+# 向下取整
+# print(math.floor(3.44))
+# print(math.pi)
+# print(math.pow(2,3))
+# print(math.factorial(5))
+# 文件路徑
+# print(os.getcwd())
+# 當前目錄  
+# print(os.curdir)
+# 創建文件夾
+# os.mkdir("文件名")
+# 刪除文件夾,只能刪除空文件夾
+# os.rmdir("文件夾路徑")
+# 刪除文件
+# os.remove("文件名")
+# 拼接路徑
+# os.path.join()
+# 獲取文件大小
+# os.path.getsize("文件名")
+# 判斷是否是文集啊
+# os.path.isfile("文件名")
+# 判斷文件是否存在
+# os.path.exists("文件名")
+# 創建文件
+# file = open("name.txt","w")
+# print(random.random())
+# 隨機整數
+# print(random.randint(10,30))
+# 隨機浮點數
+# print(random.uniform(10,30))
+# 從指定內容中隨機取出一個
+# print(random.choice("sjd"))
+# 從指定內容中隨機取出幾個
+# print(random.sample("sdg",2))
+# 創建日期，時間
+# print(datetime.datetime(2022,12,1,12,12,12))
+# 獲取當前日期時間，五天以後時間
+# print(datetime.datetime.now() + datetime.timedelta(5))
