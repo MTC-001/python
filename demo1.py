@@ -26,7 +26,7 @@
 
 # 百度首頁
 # from urllib.request import urlopen
-# url="http://www.baidu.com"
+# url="http://www.cust.edu.cn"
 # resp = urlopen(url)
 # with open("baidu.html",mode="w") as f:
 #     f.write(resp.read().decode("utf-8"))
@@ -260,11 +260,14 @@
 #     print("world")
 # ha()
 # 模塊
+from audioop import lin2adpcm
 import random
+import re
 import time
 import math
 import os
 import datetime
+from unittest import TestProgram
 
 # print(time.time())
 # 停止五秒在執行
@@ -312,3 +315,61 @@ import datetime
 # print(datetime.datetime(2022,12,1,12,12,12))
 # 獲取當前日期時間，五天以後時間
 # print(datetime.datetime.now() + datetime.timedelta(5))
+
+
+#4
+n = int(input())
+a = input().split()
+ns = []
+for i in range(0,n):
+    ns.append(int(a[i]))
+maxn = ns[0]
+sum = 0
+for n in ns:
+    sum = sum + n if sum > 0 else n
+    maxn = max(maxn, sum)
+print(maxn)
+#5
+n = ''.join(input().split()).split('0')
+r = len(n[0])
+n1 = ''.join(n[0]).split('1')
+for i in range(0,len(n1)):
+    r += len(n1[i]) * len(n1[i])
+print(r)
+#7
+n = int(input())
+Z =[0 for i in range(0,60)]
+O = [0 for i in range(0,60)]
+T = [0 for i in range(0,60)]
+Z[0] = 1
+r = 0
+for j in range(1,n+1):
+    Z[j] += Z[j -1] + O[j - 1] + T[j - 1]
+    if j >=2:
+        O[j] += Z[j -2]
+        T[j] += O[j - 2]
+    if j == n:
+        r = Z[j] + O[j] + T[j]
+print(r)
+#8
+X = []
+Y = []
+N = int(input())
+for i in range(0,N):
+    line = input().split()
+    X.append(int(line[0]))
+    Y.append(int(line[1]))
+e = 0.03
+w = 0
+b =0
+for j in range(0,1000):
+    for i in range(len(X)):
+        x = X[i]
+        y = Y[i]
+        z = w*x+b
+        dz = z - y
+        db = dz
+        dw = dz * x
+        w = w - e * dw
+        b = b - e * db
+print(b,w)

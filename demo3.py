@@ -21,8 +21,9 @@ import re
 # for i in it:
 #     print(i.group())
 # 匹配一個符合正則的內容
-res = re.search(r"\d+","手機號碼11111111,222222222,333333")
-print(res.group())
+# res = re.search(r"\d+","手機號碼11111111,222222222,333333")
+# print(res.group())
 # 從頭開始匹配一個符合正則的內容
-res = re.match(r"\d+","12344,343")
-print(res.group())
+# res = re.match(r"\d+","12344,343")
+# print(res.group())
+
