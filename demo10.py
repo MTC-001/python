@@ -1,4 +1,4 @@
-﻿# =============遗传算法解决货郎担====================
+﻿# =============遗传算法解决TSP====================
 import numpy as np
 import matplotlib.pyplot as plt
  
