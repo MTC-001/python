@@ -33,9 +33,6 @@ def fast_glcm(img):
 
 
 def fast_glcm_mean(img):
-    '''
-    calc glcm mean
-    '''
     nbit = 8
     h,w = img.shape
     glcm = fast_glcm(img)
@@ -48,9 +45,6 @@ def fast_glcm_mean(img):
 
 
 def fast_glcm_std(img):
-    '''
-    calc glcm std
-    '''
     nbit = 8
     h,w = img.shape
     glcm = fast_glcm(img)
@@ -69,9 +63,6 @@ def fast_glcm_std(img):
 
 
 def fast_glcm_contrast(img):
-    '''
-    calc glcm contrast
-    '''
     nbit = 8
     h,w = img.shape
     glcm = fast_glcm(img)
@@ -84,9 +75,6 @@ def fast_glcm_contrast(img):
 
 
 def fast_glcm_dissimilarity(img):
-    '''
-    calc glcm dissimilarity
-    '''
     nbit = 8
     h,w = img.shape
     glcm = fast_glcm(img)
@@ -99,9 +87,6 @@ def fast_glcm_dissimilarity(img):
 
 
 def fast_glcm_homogeneity(img):
-    '''
-    calc glcm homogeneity
-    '''
     nbit = 8
     h,w = img.shape
     glcm = fast_glcm(img )
@@ -114,10 +99,6 @@ def fast_glcm_homogeneity(img):
 
 
 def fast_glcm_ASM(img):
-    '''
-    calc glcm asm, energy
-    '''
-
     nbit = 8
 
     h,w = img.shape
@@ -132,18 +113,12 @@ def fast_glcm_ASM(img):
 
 
 def fast_glcm_max(img):
-    '''
-    calc glcm max
-    '''
     glcm = fast_glcm(img )
     max_  = np.max(glcm, axis=(0,1))
     return max_
 
 
 def fast_glcm_entropy(img):
-    '''
-    calc glcm entropy
-    '''
     ks = 5
     glcm = fast_glcm(img )
     pnorm = glcm / np.sum(glcm, axis=(0,1)) + 1./ks**2
